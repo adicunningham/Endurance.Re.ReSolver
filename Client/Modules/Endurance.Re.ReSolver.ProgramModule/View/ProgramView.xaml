@@ -3,10 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d">
+             mc:Ignorable="d" Width="Auto">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="50*"/>
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
         
@@ -15,6 +15,7 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!-- Program Detials -->
         <GroupBox Header="Program Details" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,10,10">
             <Grid Height="Auto">
                 <Grid.Resources>
@@ -116,6 +117,7 @@
             </Grid>
         </GroupBox>
 
+        <!-- Dates and Currency -->
         <GroupBox Header="Dates and Currency" Grid.Row="1" Grid.Column="0" Margin="10,10,10,10">
             <Grid>
                 <Grid.Resources>
@@ -170,5 +172,118 @@
             </Grid>
         </GroupBox>
         
+        <!-- Client -->
+        <GroupBox Header="Client" Grid.Row="0" Grid.Column="1" Margin="10,10,10,10">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="Margin" Value="4,4,4,4" />
+                    </Style>
+                    <Style TargetType="{x:Type Label}">
+                        <Setter Property="Margin" Value="4,4,4,4" />
+                    </Style>
+                    <Style TargetType="{x:Type ComboBox}">
+                        <Setter Property="Margin" Value="4,4,4,4" />
+                    </Style>
+                </Grid.Resources>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Row 1 -->
+                <Label Content="Client:" Grid.Row="0" Grid.Column="0"/>
+                <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+                    <TextBox Name="txtClient" Width="450"/>
+                    <Button Content="Search" Width="Auto"></Button>
+                </StackPanel>
+
+                <!-- Row 2 -->
+                <Label Content="Street Address:" Grid.Row="1" Grid.Column="0"/>
+                <TextBox Name="txtClientStreet" Width="200" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Content="City:" Grid.Row="1" Grid.Column="2"/>
+                <TextBox Name="txtClientCity" Width="200" Grid.Row="1" Grid.Column="3"/>
+
+                <!-- Row 2 -->
+                <Label Content="Country:" Grid.Row="2" Grid.Column="0"/>
+                <TextBox Name="txtClientCountry" Width="200" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Content="Domicile:" Grid.Row="2" Grid.Column="2"/>
+                <TextBox Name="txtClientDomicile" Width="200" Grid.Row="2" Grid.Column="3"/>
+
+                <!-- Row 3 -->
+                <Label Content="Client Contact:" Grid.Row="3" Grid.Column="0"/>
+                <TextBox Name="txtClientContact" Width="200" Grid.Row="3" Grid.Column="1"/>
+
+            </Grid>
+        </GroupBox>
+        
+        <!-- Broker -->
+        <GroupBox Header="Broker" Grid.Row="1" Grid.Column="1" Margin="10,10,10,10">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="Margin" Value="4,4,4,4" />
+                    </Style>
+                    <Style TargetType="{x:Type Label}">
+                        <Setter Property="Margin" Value="4,4,4,4" />
+                    </Style>
+                    <Style TargetType="{x:Type ComboBox}">
+                        <Setter Property="Margin" Value="4,4,4,4" />
+                    </Style>
+                </Grid.Resources>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Row 1 -->
+                <Label Content="Client:" Grid.Row="0" Grid.Column="0"/>
+                <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Orientation="Horizontal">
+                    <TextBox Name="txtBroker" Width="450"/>
+                    <Button Content="Search" Width="Auto"></Button>
+                </StackPanel>
+
+                <!-- Row 2 -->
+                <Label Content="Street Address:" Grid.Row="1" Grid.Column="0"/>
+                <TextBox Name="txtBrokerStreet" Width="200" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Content="City:" Grid.Row="1" Grid.Column="2"/>
+                <TextBox Name="txtBrokerCity" Width="200" Grid.Row="1" Grid.Column="3"/>
+
+                <!-- Row 2 -->
+                <Label Content="Country:" Grid.Row="2" Grid.Column="0"/>
+                <TextBox Name="txtBrokerCountry" Width="200" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Content="Domicile:" Grid.Row="2" Grid.Column="2"/>
+                <TextBox Name="txtBrokerDomicile" Width="200" Grid.Row="2" Grid.Column="3"/>
+
+                <!-- Row 3 -->
+                <Label Content="Client Contact:" Grid.Row="3" Grid.Column="0"/>
+                <TextBox Name="txtBrokerContact" Width="200" Grid.Row="3" Grid.Column="1"/>
+
+            </Grid>
+
+        </GroupBox>
+
     </Grid>
 </UserControl>

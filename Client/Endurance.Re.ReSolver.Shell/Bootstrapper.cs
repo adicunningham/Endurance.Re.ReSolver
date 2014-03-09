@@ -20,15 +20,15 @@ namespace Endurance.Re.ReSolver.Shell
             App.Current.MainWindow.Show();
         }
 
-        //protected override IModuleCatalog CreateModuleCatalog()
-        //{
-        //    return new ConfigurationModuleCatalog();
-        //}
+        protected override IModuleCatalog CreateModuleCatalog()
+        {
+            return new ConfigurationModuleCatalog();
+        }
 
         protected override void ConfigureModuleCatalog()
         {
             base.ConfigureModuleCatalog();
-            ModuleCatalog moduleCatalog = (ModuleCatalog) this.ModuleCatalog;
+            ModuleCatalog moduleCatalog = (ModuleCatalog)this.ModuleCatalog;
             //moduleCatalog.AddModule(typeof (ServiceModule.ServiceModule));
             //moduleCatalog.AddModule(typeof (ServiceMonitorModule.ServiceMonitorModule));
         }

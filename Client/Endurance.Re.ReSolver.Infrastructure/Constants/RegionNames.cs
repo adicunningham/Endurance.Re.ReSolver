@@ -13,5 +13,8 @@ namespace Endurance.Re.ReSolver.Infrastructure.Constants
         public static string WorkspaceRegion = "WorkspaceRegion";
         public static string TaskbuttonRegion = "TaskbuttonRegion";
         public static string StatusbarRegion = "StatusbarRegion";
+        public static string RibbonRegion = "RibbonRegion";
+        public static string NavigatorRegion = "NavigatorRegion";
+
     }
 }

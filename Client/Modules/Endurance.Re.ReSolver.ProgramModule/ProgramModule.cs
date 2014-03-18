@@ -22,12 +22,14 @@ namespace Endurance.Re.ReSolver.ProgramModule
 
         protected override void InitializeModule()
         {
+            RegionManager.RegisterViewWithRegion(RegionNames.TaskbuttonRegion, typeof (ProgramTaskButtonView));
             RegionManager.RegisterViewWithRegion(RegionNames.WorkspaceRegion, typeof (ProgramView));
         }
 
         protected override void RegisterTypes()
         {
             Container.RegisterType<IProgramViewModel, ProgramViewModel>();
+            Container.RegisterType<IProgramTaskButtonViewModel, ProgramTaskButtonViewModel>();
         }
     }
 }

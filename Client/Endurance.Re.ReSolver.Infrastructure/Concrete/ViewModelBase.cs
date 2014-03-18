@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
+using Endurance.Re.ReSolver.Infrastructure.Interfaces;
 
-namespace Endurance.Re.ReSolver.Infrastructure.Interfaces
+namespace Endurance.Re.ReSolver.Infrastructure.Concrete
 {
     public class ViewModelBase : IViewModel, INotifyPropertyChanged
     {

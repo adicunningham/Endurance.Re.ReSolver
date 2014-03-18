@@ -69,13 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\RegionNames.cs" />
+    <Compile Include="Events\NavigationCompletedEvent.cs" />
     <Compile Include="Interfaces\IView.cs" />
     <Compile Include="Interfaces\IViewModel.cs" />
-    <Compile Include="Interfaces\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegionAdapters\RibbonRegionAdapter.cs" />
     <Compile Include="RegionAdapters\StackPanelRegionAdapter.cs" />
     <Compile Include="Utility\ModuleBase.cs" />
+    <Compile Include="Concrete\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Themes\BureauBlack.xaml">

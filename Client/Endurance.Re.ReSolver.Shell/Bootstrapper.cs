@@ -10,7 +10,7 @@ namespace Endurance.Re.ReSolver.Shell
     {
         protected override System.Windows.DependencyObject CreateShell()
         {
-            return Container.Resolve<Shell>();
+            return Container.Resolve<RibbonShell>();
         }
 
         protected override void InitializeShell()

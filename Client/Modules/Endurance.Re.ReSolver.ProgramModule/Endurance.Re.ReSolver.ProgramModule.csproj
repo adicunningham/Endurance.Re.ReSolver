@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FsTaskButton">
+      <HintPath>..\..\..\Lib\TaskButton\FsTaskButton.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Prism.4.1.0.0\lib\NET40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
@@ -96,6 +99,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\ProgramModuleViewCommand.cs" />
     <Compile Include="ProgramModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -110,8 +114,14 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModel\IProgramTaskButtonViewModel.cs" />
     <Compile Include="ViewModel\IProgramViewModel.cs" />
+    <Compile Include="ViewModel\ProgramTaskButtonViewModel.cs" />
     <Compile Include="ViewModel\ProgramViewModel.cs" />
+    <Compile Include="View\IProgramTaskButtonView.cs" />
+    <Compile Include="View\ProgramTaskButtonView.xaml.cs">
+      <DependentUpon>ProgramTaskButtonView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ProgramView.xaml.cs">
       <DependentUpon>ProgramView.xaml</DependentUpon>
     </Compile>
@@ -132,8 +142,17 @@
       <Name>Endurance.Re.ReSolver.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Resource Include="View\Images\LargeFileOpenIcon.jpg" />
+    <Resource Include="View\Images\LargeIcon.png" />
+    <Resource Include="View\Images\module_a.png" />
+    <Resource Include="View\Images\SmallIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\ProgramTaskButtonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ProgramView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
